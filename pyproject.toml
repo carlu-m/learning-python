@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "learning-python"
+description = "Project to experiment with Python's possibilities"
+readme = "README.md"
+version = "0.0.1"
+requires-python = ">=3.12"
+authors = [
+    { name = "Carlu-m" }
+]
+keywords = [
+    "software engineering",
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+]
+
+[project.urls]
+repository = "https://github.com/carlu-m/learning-python"
+documentation = "https://github.com/carlu-m/learning-python/blob/trunk/README.md"
+
+[project.optional-dependencies]
+linter = [
+]
+security = []
+test = []
