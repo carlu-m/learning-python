@@ -2,7 +2,7 @@
 
 Project to explore Python's possibilities
 
-## TODO:
+# TODO:
 
 - [] linter
 - [] prettier
