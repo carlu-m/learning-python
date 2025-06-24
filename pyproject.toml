@@ -18,8 +18,8 @@ dev = [
 ]
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["uv_build>=0.7.13,<0.8.0"]
+build-backend = "uv_build"
 
 [project.scripts]
 learning-python = "learning_python:main"
@@ -29,3 +29,13 @@ extend-select = ["B"]
 
 [tool.pytest.ini_options]
 addopts = "--maxfail=1 --cov=learning_python"
+console_output_style = "times"
+empty_parameter_set_mark = "xfail"
+minversion = "3.12"
+
+[tool.coverage.run]
+branch = "true"
+omit = ["src/**/__init__.py"]
+
+[tool.coverage.report]
+fail_under = "100"
