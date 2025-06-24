@@ -4,8 +4,8 @@ Project to explore Python's possibilities:
 
 1. Writing functions to try out different Python's language feature, and write associated tests
 2. Try out the tooling that exists in the Python ecosystem:
-  2.1. How to create a project from scratch
-  2.2. Experiment with the linters, formatters, unit testing tools, mutation tests, etc
+   - How to create a project from scratch
+   - Experiment with the linters, formatters, unit testing tools, mutation tests, etc
 
 ## Project requirements
 
