@@ -56,3 +56,13 @@ name = "http"
 
 [cosmic-ray.distributor.http]
 worker-urls = ["http://localhost:9800", "http://localhost:9801"]
+
+[cosmic-ray.badge]
+label = "mutation"
+format = "%.2f %%"
+
+[cosmic-ray.badge.thresholds]
+80  = 'red'
+90  = 'orange'
+95 = 'yellow'
+100 = 'green'
