@@ -1,0 +1,2313 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /><title>Cosmic Ray Report</title></head><body><div class="container"><h1><p class="text-dark">Cosmic Ray Report</p></h1></div><div class="container"><div class="mb-1" id="summary_info___accordion"><div class="card"><a data-toggle="collapse" data-target="#summary_info___collapse_1" aria-expanded="true" aria-controls="summary_info___collapse_1" href="#"><div class="card-header" id="summary_info___heading_1"><button class="btn btn-outline-dark"><h4 class="m-0">Summary info</h4></button></div></a><div aria-labelledby="summary_info___heading_1" data-parent="#summary_info___accordion" class="collapse show" id="summary_info___collapse_1"><div class="card-body"><p>Date time: 25/06/2025 11:16:19</p><p>Total jobs: 52</p><p>Complete: 52 (100.00%)</p><p>Surviving mutants: 0 (0.00%)</p></div></div></div></div><div class="mb-1" id="job_list___accordion"><div class="card"><a data-toggle="collapse" data-target="#job_list___collapse_1" aria-expanded="false" aria-controls="job_list___collapse_1" href="#"><div class="card-header" id="job_list___heading_1"><button class="btn btn-outline-dark"><h4 class="m-0">Job list</h4></button></div></a><div aria-labelledby="job_list___heading_1" data-parent="#job_list___accordion" class="collapse" id="job_list___collapse_1"><div class="card-body"><div class="text-right mb-1"><div class="mx-1" id="job_item_expand_all"><a href="#" onclick="$('div.job_list___sub_multi_collapse').collapse('show');"><button class="btn btn-outline-dark"><span>Expand All</span></button></a></div><div class="mx-1" id="job_item_collapse_all"><a href="#" onclick="$('div.job_list___sub_multi_collapse').collapse('hide');"><button class="btn btn-outline-dark"><span>Collapse All</span></button></a></div></div><div class="mb-1" id="job_list___sub_accordion_1"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_1_1" aria-expanded="false" aria-controls="job_list___sub_collapse_1_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_1_1"><button class="btn btn-outline-success"><span class="job_id">1 : Job ID c76ac24dc30e4288832d918acc2c9603</span></button></div></a><div aria-labelledby="job_list___sub_heading_1_1" data-parent="#job_list___sub_accordion_1" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_1_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=93" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (93, 14), end pos: (93, 16)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Pow_Add, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -90,7 +90,7 @@
+         #     return "empty object"
+ 
+         # Need to use a guard to check emptiness
+-        case {**properties} if not properties:
++        case {+properties} if not properties:
+             return "empty object"
+ 
+         case {"test": "OK"}:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 93
+E       case {+properties} if not properties:
+E             ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.26s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_2"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_2_1" aria-expanded="false" aria-controls="job_list___sub_collapse_2_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_2_1"><button class="btn btn-outline-success"><span class="job_id">2 : Job ID 75f9b1a5144a433eac5fb174fd6adb25</span></button></div></a><div aria-labelledby="job_list___sub_heading_2_1" data-parent="#job_list___sub_accordion_2" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_2_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=93" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (93, 14), end pos: (93, 16)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Pow_Sub, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -90,7 +90,7 @@
+         #     return "empty object"
+ 
+         # Need to use a guard to check emptiness
+-        case {**properties} if not properties:
++        case {-properties} if not properties:
+             return "empty object"
+ 
+         case {"test": "OK"}:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 93
+E       case {-properties} if not properties:
+E              ^^^^^^^^^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.28s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_3"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_3_1" aria-expanded="false" aria-controls="job_list___sub_collapse_3_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_3_1"><button class="btn btn-outline-success"><span class="job_id">3 : Job ID 5c1ccff707de44d7a9a5a8f6f62a55bd</span></button></div></a><div aria-labelledby="job_list___sub_heading_3_1" data-parent="#job_list___sub_accordion_3" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_3_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=93" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (93, 14), end pos: (93, 16)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Pow_Mul, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -90,7 +90,7 @@
+         #     return "empty object"
+ 
+         # Need to use a guard to check emptiness
+-        case {**properties} if not properties:
++        case {*properties} if not properties:
+             return "empty object"
+ 
+         case {"test": "OK"}:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 93
+E       case {*properties} if not properties:
+E             ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.31s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_4"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_4_1" aria-expanded="false" aria-controls="job_list___sub_collapse_4_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_4_1"><button class="btn btn-outline-success"><span class="job_id">4 : Job ID 1738f4e2d7ae454aa0a9546fa8be605a</span></button></div></a><div aria-labelledby="job_list___sub_heading_4_1" data-parent="#job_list___sub_accordion_4" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_4_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=93" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (93, 14), end pos: (93, 16)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Pow_Div, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -90,7 +90,7 @@
+         #     return "empty object"
+ 
+         # Need to use a guard to check emptiness
+-        case {**properties} if not properties:
++        case {/properties} if not properties:
+             return "empty object"
+ 
+         case {"test": "OK"}:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 93
+E       case {/properties} if not properties:
+E             ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.29s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_5"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_5_1" aria-expanded="false" aria-controls="job_list___sub_collapse_5_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_5_1"><button class="btn btn-outline-success"><span class="job_id">5 : Job ID c46a6714a6c7431894c441b4a72d4db9</span></button></div></a><div aria-labelledby="job_list___sub_heading_5_1" data-parent="#job_list___sub_accordion_5" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_5_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=93" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (93, 14), end pos: (93, 16)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Pow_FloorDiv, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -90,7 +90,7 @@
+         #     return "empty object"
+ 
+         # Need to use a guard to check emptiness
+-        case {**properties} if not properties:
++        case {//properties} if not properties:
+             return "empty object"
+ 
+         case {"test": "OK"}:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 93
+E       case {//properties} if not properties:
+E             ^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.30s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_6"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_6_1" aria-expanded="false" aria-controls="job_list___sub_collapse_6_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_6_1"><button class="btn btn-outline-success"><span class="job_id">6 : Job ID 1823138ac30540fbbbdfc58c4386b3c4</span></button></div></a><div aria-labelledby="job_list___sub_heading_6_1" data-parent="#job_list___sub_accordion_6" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_6_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=93" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (93, 14), end pos: (93, 16)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Pow_Mod, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -90,7 +90,7 @@
+         #     return "empty object"
+ 
+         # Need to use a guard to check emptiness
+-        case {**properties} if not properties:
++        case {%properties} if not properties:
+             return "empty object"
+ 
+         case {"test": "OK"}:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 93
+E       case {%properties} if not properties:
+E             ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.27s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_7"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_7_1" aria-expanded="false" aria-controls="job_list___sub_collapse_7_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_7_1"><button class="btn btn-outline-success"><span class="job_id">7 : Job ID b879b30d92fc40a59086c823ae954184</span></button></div></a><div aria-labelledby="job_list___sub_heading_7_1" data-parent="#job_list___sub_accordion_7" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_7_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=93" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (93, 14), end pos: (93, 16)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Pow_RShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -90,7 +90,7 @@
+         #     return "empty object"
+ 
+         # Need to use a guard to check emptiness
+-        case {**properties} if not properties:
++        case {&gt;&gt;properties} if not properties:
+             return "empty object"
+ 
+         case {"test": "OK"}:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 93
+E       case {&gt;&gt;properties} if not properties:
+E             ^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.26s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_8"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_8_1" aria-expanded="false" aria-controls="job_list___sub_collapse_8_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_8_1"><button class="btn btn-outline-success"><span class="job_id">8 : Job ID 89557be5cf8442ac98af970d5e05e803</span></button></div></a><div aria-labelledby="job_list___sub_heading_8_1" data-parent="#job_list___sub_accordion_8" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_8_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=93" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (93, 14), end pos: (93, 16)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Pow_LShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -90,7 +90,7 @@
+         #     return "empty object"
+ 
+         # Need to use a guard to check emptiness
+-        case {**properties} if not properties:
++        case {&lt;&lt;properties} if not properties:
+             return "empty object"
+ 
+         case {"test": "OK"}:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 93
+E       case {&lt;&lt;properties} if not properties:
+E             ^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.32s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_9"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_9_1" aria-expanded="false" aria-controls="job_list___sub_collapse_9_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_9_1"><button class="btn btn-outline-success"><span class="job_id">9 : Job ID 8651b625e0094c09bdb1ae8f3b0dc011</span></button></div></a><div aria-labelledby="job_list___sub_heading_9_1" data-parent="#job_list___sub_accordion_9" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_9_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=93" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (93, 14), end pos: (93, 16)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Pow_BitOr, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -90,7 +90,7 @@
+         #     return "empty object"
+ 
+         # Need to use a guard to check emptiness
+-        case {**properties} if not properties:
++        case {|properties} if not properties:
+             return "empty object"
+ 
+         case {"test": "OK"}:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 93
+E       case {|properties} if not properties:
+E             ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.28s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_10"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_10_1" aria-expanded="false" aria-controls="job_list___sub_collapse_10_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_10_1"><button class="btn btn-outline-success"><span class="job_id">10 : Job ID 004878e1e68048e2a85b41d5dd87b010</span></button></div></a><div aria-labelledby="job_list___sub_heading_10_1" data-parent="#job_list___sub_accordion_10" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_10_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=93" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (93, 14), end pos: (93, 16)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Pow_BitAnd, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -90,7 +90,7 @@
+         #     return "empty object"
+ 
+         # Need to use a guard to check emptiness
+-        case {**properties} if not properties:
++        case {&amp;properties} if not properties:
+             return "empty object"
+ 
+         case {"test": "OK"}:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 93
+E       case {&amp;properties} if not properties:
+E             ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.27s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_11"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_11_1" aria-expanded="false" aria-controls="job_list___sub_collapse_11_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_11_1"><button class="btn btn-outline-success"><span class="job_id">11 : Job ID 63c16e43949a49bb93154948f5aea603</span></button></div></a><div aria-labelledby="job_list___sub_heading_11_1" data-parent="#job_list___sub_accordion_11" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_11_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=93" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (93, 14), end pos: (93, 16)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_Pow_BitXor, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -90,7 +90,7 @@
+         #     return "empty object"
+ 
+         # Need to use a guard to check emptiness
+-        case {**properties} if not properties:
++        case {^properties} if not properties:
+             return "empty object"
+ 
+         case {"test": "OK"}:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 93
+E       case {^properties} if not properties:
+E             ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.29s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_12"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_12_1" aria-expanded="false" aria-controls="job_list___sub_collapse_12_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_12_1"><button class="btn btn-outline-success"><span class="job_id">12 : Job ID f5487c90fe9a423b847914bc474808f8</span></button></div></a><div aria-labelledby="job_list___sub_heading_12_1" data-parent="#job_list___sub_accordion_12" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_12_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (22, 25), end pos: (22, 26)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_Add, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -19,7 +19,7 @@
+             return "integer 1"
+ 
+         # Multiple options on one line
+-        case "inlineOne" | "inlineTwo":
++        case "inlineOne" + "inlineTwo":
+             return "inline conditions"
+ 
+         # Works in JS, does not work in Python</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 22
+E       case "inlineOne" + "inlineTwo":
+E                        ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.27s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_13"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_13_1" aria-expanded="false" aria-controls="job_list___sub_collapse_13_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_13_1"><button class="btn btn-outline-success"><span class="job_id">13 : Job ID f5451265b88b43bdaeac467a7f460df9</span></button></div></a><div aria-labelledby="job_list___sub_heading_13_1" data-parent="#job_list___sub_accordion_13" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_13_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=33" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (33, 12), end pos: (33, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_Add, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -30,7 +30,7 @@
+         # Multiple potentially complex conditions over multiple lines:
+         case (
+             "thisIsAnExtremelyLongSuccessiveOne"
+-            | "thisIsAnExtremelyLongSuccessiveTwo"
++            + "thisIsAnExtremelyLongSuccessiveTwo"
+         ):
+             return "successive conditions"
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 33
+E       + "thisIsAnExtremelyLongSuccessiveTwo"
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.30s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_14"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_14_1" aria-expanded="false" aria-controls="job_list___sub_collapse_14_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_14_1"><button class="btn btn-outline-success"><span class="job_id">14 : Job ID 8da3b05cf66c4fa481c4229ea0374576</span></button></div></a><div aria-labelledby="job_list___sub_heading_14_1" data-parent="#job_list___sub_accordion_14" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_14_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (22, 25), end pos: (22, 26)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_Sub, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -19,7 +19,7 @@
+             return "integer 1"
+ 
+         # Multiple options on one line
+-        case "inlineOne" | "inlineTwo":
++        case "inlineOne" - "inlineTwo":
+             return "inline conditions"
+ 
+         # Works in JS, does not work in Python</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 22
+E       case "inlineOne" - "inlineTwo":
+E                        ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.29s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_15"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_15_1" aria-expanded="false" aria-controls="job_list___sub_collapse_15_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_15_1"><button class="btn btn-outline-success"><span class="job_id">15 : Job ID 7fac836db86e400abd55e7b272d229ba</span></button></div></a><div aria-labelledby="job_list___sub_heading_15_1" data-parent="#job_list___sub_accordion_15" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_15_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=33" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (33, 12), end pos: (33, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_Sub, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -30,7 +30,7 @@
+         # Multiple potentially complex conditions over multiple lines:
+         case (
+             "thisIsAnExtremelyLongSuccessiveOne"
+-            | "thisIsAnExtremelyLongSuccessiveTwo"
++            - "thisIsAnExtremelyLongSuccessiveTwo"
+         ):
+             return "successive conditions"
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 33
+E       - "thisIsAnExtremelyLongSuccessiveTwo"
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.31s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_16"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_16_1" aria-expanded="false" aria-controls="job_list___sub_collapse_16_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_16_1"><button class="btn btn-outline-success"><span class="job_id">16 : Job ID db3fe90e4347485eae72940a0d7d7eeb</span></button></div></a><div aria-labelledby="job_list___sub_heading_16_1" data-parent="#job_list___sub_accordion_16" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_16_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (22, 25), end pos: (22, 26)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_Mul, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -19,7 +19,7 @@
+             return "integer 1"
+ 
+         # Multiple options on one line
+-        case "inlineOne" | "inlineTwo":
++        case "inlineOne" * "inlineTwo":
+             return "inline conditions"
+ 
+         # Works in JS, does not work in Python</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 22
+E       case "inlineOne" * "inlineTwo":
+E                        ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.28s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_17"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_17_1" aria-expanded="false" aria-controls="job_list___sub_collapse_17_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_17_1"><button class="btn btn-outline-success"><span class="job_id">17 : Job ID 9afee5f3bad4453b8fd0581724146978</span></button></div></a><div aria-labelledby="job_list___sub_heading_17_1" data-parent="#job_list___sub_accordion_17" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_17_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=33" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (33, 12), end pos: (33, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_Mul, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -30,7 +30,7 @@
+         # Multiple potentially complex conditions over multiple lines:
+         case (
+             "thisIsAnExtremelyLongSuccessiveOne"
+-            | "thisIsAnExtremelyLongSuccessiveTwo"
++            * "thisIsAnExtremelyLongSuccessiveTwo"
+         ):
+             return "successive conditions"
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 33
+E       * "thisIsAnExtremelyLongSuccessiveTwo"
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.31s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_18"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_18_1" aria-expanded="false" aria-controls="job_list___sub_collapse_18_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_18_1"><button class="btn btn-outline-success"><span class="job_id">18 : Job ID ff06741637e640859b644401eef535cb</span></button></div></a><div aria-labelledby="job_list___sub_heading_18_1" data-parent="#job_list___sub_accordion_18" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_18_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (22, 25), end pos: (22, 26)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_Div, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -19,7 +19,7 @@
+             return "integer 1"
+ 
+         # Multiple options on one line
+-        case "inlineOne" | "inlineTwo":
++        case "inlineOne" / "inlineTwo":
+             return "inline conditions"
+ 
+         # Works in JS, does not work in Python</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 22
+E       case "inlineOne" / "inlineTwo":
+E                        ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.26s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_19"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_19_1" aria-expanded="false" aria-controls="job_list___sub_collapse_19_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_19_1"><button class="btn btn-outline-success"><span class="job_id">19 : Job ID 8a986735168341f4978421395d5fb3a5</span></button></div></a><div aria-labelledby="job_list___sub_heading_19_1" data-parent="#job_list___sub_accordion_19" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_19_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=33" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (33, 12), end pos: (33, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_Div, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -30,7 +30,7 @@
+         # Multiple potentially complex conditions over multiple lines:
+         case (
+             "thisIsAnExtremelyLongSuccessiveOne"
+-            | "thisIsAnExtremelyLongSuccessiveTwo"
++            / "thisIsAnExtremelyLongSuccessiveTwo"
+         ):
+             return "successive conditions"
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 33
+E       / "thisIsAnExtremelyLongSuccessiveTwo"
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.28s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_20"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_20_1" aria-expanded="false" aria-controls="job_list___sub_collapse_20_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_20_1"><button class="btn btn-outline-success"><span class="job_id">20 : Job ID ae24541cc72b47479bde0a781f8c317e</span></button></div></a><div aria-labelledby="job_list___sub_heading_20_1" data-parent="#job_list___sub_accordion_20" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_20_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (22, 25), end pos: (22, 26)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_FloorDiv, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -19,7 +19,7 @@
+             return "integer 1"
+ 
+         # Multiple options on one line
+-        case "inlineOne" | "inlineTwo":
++        case "inlineOne" // "inlineTwo":
+             return "inline conditions"
+ 
+         # Works in JS, does not work in Python</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 22
+E       case "inlineOne" // "inlineTwo":
+E                        ^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.28s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_21"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_21_1" aria-expanded="false" aria-controls="job_list___sub_collapse_21_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_21_1"><button class="btn btn-outline-success"><span class="job_id">21 : Job ID 8c6e817c0bab45e2b09e294c742c316c</span></button></div></a><div aria-labelledby="job_list___sub_heading_21_1" data-parent="#job_list___sub_accordion_21" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_21_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=33" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (33, 12), end pos: (33, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_FloorDiv, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -30,7 +30,7 @@
+         # Multiple potentially complex conditions over multiple lines:
+         case (
+             "thisIsAnExtremelyLongSuccessiveOne"
+-            | "thisIsAnExtremelyLongSuccessiveTwo"
++            // "thisIsAnExtremelyLongSuccessiveTwo"
+         ):
+             return "successive conditions"
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 33
+E       // "thisIsAnExtremelyLongSuccessiveTwo"
+E       ^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.28s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_22"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_22_1" aria-expanded="false" aria-controls="job_list___sub_collapse_22_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_22_1"><button class="btn btn-outline-success"><span class="job_id">22 : Job ID d179d7cb9fad49bf92e7dd3e848f6649</span></button></div></a><div aria-labelledby="job_list___sub_heading_22_1" data-parent="#job_list___sub_accordion_22" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_22_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (22, 25), end pos: (22, 26)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_Mod, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -19,7 +19,7 @@
+             return "integer 1"
+ 
+         # Multiple options on one line
+-        case "inlineOne" | "inlineTwo":
++        case "inlineOne" % "inlineTwo":
+             return "inline conditions"
+ 
+         # Works in JS, does not work in Python</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 22
+E       case "inlineOne" % "inlineTwo":
+E                        ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.29s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_23"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_23_1" aria-expanded="false" aria-controls="job_list___sub_collapse_23_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_23_1"><button class="btn btn-outline-success"><span class="job_id">23 : Job ID 75a4458b00f94e4e85eac226f6b20663</span></button></div></a><div aria-labelledby="job_list___sub_heading_23_1" data-parent="#job_list___sub_accordion_23" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_23_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=33" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (33, 12), end pos: (33, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_Mod, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -30,7 +30,7 @@
+         # Multiple potentially complex conditions over multiple lines:
+         case (
+             "thisIsAnExtremelyLongSuccessiveOne"
+-            | "thisIsAnExtremelyLongSuccessiveTwo"
++            % "thisIsAnExtremelyLongSuccessiveTwo"
+         ):
+             return "successive conditions"
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 33
+E       % "thisIsAnExtremelyLongSuccessiveTwo"
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.29s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_24"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_24_1" aria-expanded="false" aria-controls="job_list___sub_collapse_24_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_24_1"><button class="btn btn-outline-success"><span class="job_id">24 : Job ID 3c53ae4b4fc4452ba634a4626792353f</span></button></div></a><div aria-labelledby="job_list___sub_heading_24_1" data-parent="#job_list___sub_accordion_24" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_24_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (22, 25), end pos: (22, 26)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_Pow, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -19,7 +19,7 @@
+             return "integer 1"
+ 
+         # Multiple options on one line
+-        case "inlineOne" | "inlineTwo":
++        case "inlineOne" ** "inlineTwo":
+             return "inline conditions"
+ 
+         # Works in JS, does not work in Python</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 22
+E       case "inlineOne" ** "inlineTwo":
+E                        ^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.26s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_25"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_25_1" aria-expanded="false" aria-controls="job_list___sub_collapse_25_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_25_1"><button class="btn btn-outline-success"><span class="job_id">25 : Job ID 02821c26b8c34b0db8f3ee3d0c77c69a</span></button></div></a><div aria-labelledby="job_list___sub_heading_25_1" data-parent="#job_list___sub_accordion_25" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_25_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=33" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (33, 12), end pos: (33, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_Pow, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -30,7 +30,7 @@
+         # Multiple potentially complex conditions over multiple lines:
+         case (
+             "thisIsAnExtremelyLongSuccessiveOne"
+-            | "thisIsAnExtremelyLongSuccessiveTwo"
++            ** "thisIsAnExtremelyLongSuccessiveTwo"
+         ):
+             return "successive conditions"
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 33
+E       ** "thisIsAnExtremelyLongSuccessiveTwo"
+E       ^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.29s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_26"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_26_1" aria-expanded="false" aria-controls="job_list___sub_collapse_26_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_26_1"><button class="btn btn-outline-success"><span class="job_id">26 : Job ID 519cc4f9182449d491dd4e5906be4b05</span></button></div></a><div aria-labelledby="job_list___sub_heading_26_1" data-parent="#job_list___sub_accordion_26" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_26_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (22, 25), end pos: (22, 26)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_RShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -19,7 +19,7 @@
+             return "integer 1"
+ 
+         # Multiple options on one line
+-        case "inlineOne" | "inlineTwo":
++        case "inlineOne" &gt;&gt; "inlineTwo":
+             return "inline conditions"
+ 
+         # Works in JS, does not work in Python</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 22
+E       case "inlineOne" &gt;&gt; "inlineTwo":
+E                        ^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.27s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_27"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_27_1" aria-expanded="false" aria-controls="job_list___sub_collapse_27_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_27_1"><button class="btn btn-outline-success"><span class="job_id">27 : Job ID f7f47738ac864677bcd2b48a9cb4ce0a</span></button></div></a><div aria-labelledby="job_list___sub_heading_27_1" data-parent="#job_list___sub_accordion_27" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_27_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=33" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (33, 12), end pos: (33, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_RShift, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -30,7 +30,7 @@
+         # Multiple potentially complex conditions over multiple lines:
+         case (
+             "thisIsAnExtremelyLongSuccessiveOne"
+-            | "thisIsAnExtremelyLongSuccessiveTwo"
++            &gt;&gt; "thisIsAnExtremelyLongSuccessiveTwo"
+         ):
+             return "successive conditions"
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 33
+E       &gt;&gt; "thisIsAnExtremelyLongSuccessiveTwo"
+E       ^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.27s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_28"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_28_1" aria-expanded="false" aria-controls="job_list___sub_collapse_28_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_28_1"><button class="btn btn-outline-success"><span class="job_id">28 : Job ID 1d94fce61a2a4700bd4d254f01d1206f</span></button></div></a><div aria-labelledby="job_list___sub_heading_28_1" data-parent="#job_list___sub_accordion_28" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_28_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (22, 25), end pos: (22, 26)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_LShift, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -19,7 +19,7 @@
+             return "integer 1"
+ 
+         # Multiple options on one line
+-        case "inlineOne" | "inlineTwo":
++        case "inlineOne" &lt;&lt; "inlineTwo":
+             return "inline conditions"
+ 
+         # Works in JS, does not work in Python</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 22
+E       case "inlineOne" &lt;&lt; "inlineTwo":
+E                        ^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.27s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_29"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_29_1" aria-expanded="false" aria-controls="job_list___sub_collapse_29_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_29_1"><button class="btn btn-outline-success"><span class="job_id">29 : Job ID bdadddfd5a1d42e1bdba1a8238f96b02</span></button></div></a><div aria-labelledby="job_list___sub_heading_29_1" data-parent="#job_list___sub_accordion_29" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_29_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=33" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (33, 12), end pos: (33, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_LShift, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -30,7 +30,7 @@
+         # Multiple potentially complex conditions over multiple lines:
+         case (
+             "thisIsAnExtremelyLongSuccessiveOne"
+-            | "thisIsAnExtremelyLongSuccessiveTwo"
++            &lt;&lt; "thisIsAnExtremelyLongSuccessiveTwo"
+         ):
+             return "successive conditions"
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 33
+E       &lt;&lt; "thisIsAnExtremelyLongSuccessiveTwo"
+E       ^^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.30s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_30"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_30_1" aria-expanded="false" aria-controls="job_list___sub_collapse_30_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_30_1"><button class="btn btn-outline-success"><span class="job_id">30 : Job ID f2f2f8a8eda84a4fb62268e74181948d</span></button></div></a><div aria-labelledby="job_list___sub_heading_30_1" data-parent="#job_list___sub_accordion_30" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_30_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (22, 25), end pos: (22, 26)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_BitAnd, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -19,7 +19,7 @@
+             return "integer 1"
+ 
+         # Multiple options on one line
+-        case "inlineOne" | "inlineTwo":
++        case "inlineOne" &amp; "inlineTwo":
+             return "inline conditions"
+ 
+         # Works in JS, does not work in Python</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 22
+E       case "inlineOne" &amp; "inlineTwo":
+E                        ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.35s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_31"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_31_1" aria-expanded="false" aria-controls="job_list___sub_collapse_31_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_31_1"><button class="btn btn-outline-success"><span class="job_id">31 : Job ID 043ad99b26b44ec4800aa4419e7743bd</span></button></div></a><div aria-labelledby="job_list___sub_heading_31_1" data-parent="#job_list___sub_accordion_31" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_31_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=33" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (33, 12), end pos: (33, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_BitAnd, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -30,7 +30,7 @@
+         # Multiple potentially complex conditions over multiple lines:
+         case (
+             "thisIsAnExtremelyLongSuccessiveOne"
+-            | "thisIsAnExtremelyLongSuccessiveTwo"
++            &amp; "thisIsAnExtremelyLongSuccessiveTwo"
+         ):
+             return "successive conditions"
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 33
+E       &amp; "thisIsAnExtremelyLongSuccessiveTwo"
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.28s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_32"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_32_1" aria-expanded="false" aria-controls="job_list___sub_collapse_32_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_32_1"><button class="btn btn-outline-success"><span class="job_id">32 : Job ID 2291a3eee8fc4216aaeb7eada2406f25</span></button></div></a><div aria-labelledby="job_list___sub_heading_32_1" data-parent="#job_list___sub_accordion_32" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_32_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=22" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (22, 25), end pos: (22, 26)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_BitXor, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -19,7 +19,7 @@
+             return "integer 1"
+ 
+         # Multiple options on one line
+-        case "inlineOne" | "inlineTwo":
++        case "inlineOne" ^ "inlineTwo":
+             return "inline conditions"
+ 
+         # Works in JS, does not work in Python</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 22
+E       case "inlineOne" ^ "inlineTwo":
+E                        ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.36s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_33"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_33_1" aria-expanded="false" aria-controls="job_list___sub_collapse_33_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_33_1"><button class="btn btn-outline-success"><span class="job_id">33 : Job ID 30b0d0ff11e04c3ba06e8982b20d08b6</span></button></div></a><div aria-labelledby="job_list___sub_heading_33_1" data-parent="#job_list___sub_accordion_33" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_33_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=33" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (33, 12), end pos: (33, 13)</button></a></pre><pre>operator: core/ReplaceBinaryOperator_BitOr_BitXor, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -30,7 +30,7 @@
+         # Multiple potentially complex conditions over multiple lines:
+         case (
+             "thisIsAnExtremelyLongSuccessiveOne"
+-            | "thisIsAnExtremelyLongSuccessiveTwo"
++            ^ "thisIsAnExtremelyLongSuccessiveTwo"
+         ):
+             return "successive conditions"
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+_______ ERROR collecting tests/pattern_matching/pattern_matching_test.py _______
+.venv/lib/python3.12/site-packages/_pytest/python.py:498: in importtestmodule
+    mod = import_path(
+.venv/lib/python3.12/site-packages/_pytest/pathlib.py:587: in import_path
+    importlib.import_module(module_name)
+/usr/lib/python3.12/importlib/__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:1331: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:935: in _load_unlocked
+    ???
+.venv/lib/python3.12/site-packages/_pytest/assertion/rewrite.py:186: in exec_module
+    exec(co, module.__dict__)
+tests/pattern_matching/pattern_matching_test.py:3: in &lt;module&gt;
+    from learning_python.pattern_matching.pattern_matching import (
+E     File "/home/maxime/Developpement/Perso/learning-python/src/learning_python/pattern_matching/pattern_matching.py", line 33
+E       ^ "thisIsAnExtremelyLongSuccessiveTwo"
+E       ^
+E   SyntaxError: invalid syntax
+=========================== short test summary info ============================
+ERROR tests/pattern_matching/pattern_matching_test.py
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.29s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_34"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_34_1" aria-expanded="false" aria-controls="job_list___sub_collapse_34_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_34_1"><button class="btn btn-outline-success"><span class="job_id">34 : Job ID 8a154292d1fe4f1c95fcee4b0cce06ca</span></button></div></a><div aria-labelledby="job_list___sub_heading_34_1" data-parent="#job_list___sub_accordion_34" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_34_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=93" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (93, 31), end pos: (93, 34)</button></a></pre><pre>operator: core/ReplaceUnaryOperator_Delete_Not, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -90,7 +90,7 @@
+         #     return "empty object"
+ 
+         # Need to use a guard to check emptiness
+-        case {**properties} if not properties:
++        case {**properties} if  properties:
+             return "empty object"
+ 
+         case {"test": "OK"}:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py ...........F
+
+=================================== FAILURES ===================================
+_________________ TestObjectPatternMatching.test_empty_object __________________
+
+self = &lt;pattern_matching_test.TestObjectPatternMatching testMethod=test_empty_object&gt;
+
+    def test_empty_object(self):
+&gt;       self.assertEqual(object_pattern_matching({}), "empty object")
+E       AssertionError: 'default case' != 'empty object'
+E       - default case
+E       + empty object
+
+tests/pattern_matching/pattern_matching_test.py:97: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestObjectPatternMatching::test_empty_object
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 11 passed in 0.06s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_35"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_35_1" aria-expanded="false" aria-controls="job_list___sub_collapse_35_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_35_1"><button class="btn btn-outline-success"><span class="job_id">35 : Job ID 0359e257e1ba491ca55380b7cc847ac4</span></button></div></a><div aria-labelledby="job_list___sub_heading_35_1" data-parent="#job_list___sub_accordion_35" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_35_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=18" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (18, 13), end pos: (18, 14)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -15,7 +15,7 @@
+         case "1":
+             return "string 1"
+ 
+-        case 1:
++        case 2:
+             return "integer 1"
+ 
+         # Multiple options on one line</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py F
+
+=================================== FAILURES ===================================
+_____ TestSimplePatternMatching.test_difference_between_string_and_integer _____
+
+self = &lt;pattern_matching_test.TestSimplePatternMatching testMethod=test_difference_between_string_and_integer&gt;
+
+    def test_difference_between_string_and_integer(self):
+        self.assertEqual(simple_pattern_matching("1"), "string 1")
+&gt;       self.assertEqual(simple_pattern_matching(1), "integer 1")
+E       AssertionError: 'default case' != 'integer 1'
+E       - default case
+E       + integer 1
+
+tests/pattern_matching/pattern_matching_test.py:18: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestSimplePatternMatching::test_difference_between_string_and_integer
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================== 1 failed in 0.05s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_36"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_36_1" aria-expanded="false" aria-controls="job_list___sub_collapse_36_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_36_1"><button class="btn btn-outline-success"><span class="job_id">36 : Job ID af99d2eea4e14a4e8c405ecae0528d89</span></button></div></a><div aria-labelledby="job_list___sub_heading_36_1" data-parent="#job_list___sub_accordion_36" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_36_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=18" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (18, 13), end pos: (18, 14)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -15,7 +15,7 @@
+         case "1":
+             return "string 1"
+ 
+-        case 1:
++        case 0:
+             return "integer 1"
+ 
+         # Multiple options on one line</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py F
+
+=================================== FAILURES ===================================
+_____ TestSimplePatternMatching.test_difference_between_string_and_integer _____
+
+self = &lt;pattern_matching_test.TestSimplePatternMatching testMethod=test_difference_between_string_and_integer&gt;
+
+    def test_difference_between_string_and_integer(self):
+        self.assertEqual(simple_pattern_matching("1"), "string 1")
+&gt;       self.assertEqual(simple_pattern_matching(1), "integer 1")
+E       AssertionError: 'default case' != 'integer 1'
+E       - default case
+E       + integer 1
+
+tests/pattern_matching/pattern_matching_test.py:18: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestSimplePatternMatching::test_difference_between_string_and_integer
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================== 1 failed in 0.05s ===============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_37"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_37_1" aria-expanded="false" aria-controls="job_list___sub_collapse_37_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_37_1"><button class="btn btn-outline-success"><span class="job_id">37 : Job ID 290a083fa6d945608f9fa3c83d7ef89c</span></button></div></a><div aria-labelledby="job_list___sub_heading_37_1" data-parent="#job_list___sub_accordion_37" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_37_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=44" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (44, 14), end pos: (44, 15)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 2</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -41,7 +41,7 @@
+ def tuple_pattern_matching(tup):
+     """Small function to test pattern matching for tuples"""
+     match tup:
+-        case (0, 0):
++        case ( 1, 0):
+             return "explicitely got two 0"
+ 
+         case (0, _y):</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py .........F
+
+=================================== FAILURES ===================================
+__________ TestTuplePatternMatching.test_two_items_tuple_permutations __________
+
+self = &lt;pattern_matching_test.TestTuplePatternMatching testMethod=test_two_items_tuple_permutations&gt;
+
+    def test_two_items_tuple_permutations(self):
+&gt;       self.assertEqual(tuple_pattern_matching((0, 0)), "explicitely got two 0")
+E       AssertionError: 'got explicit 0 and any other value' != 'explicitely got two 0'
+E       - got explicit 0 and any other value
+E       + explicitely got two 0
+
+tests/pattern_matching/pattern_matching_test.py:42: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestTuplePatternMatching::test_two_items_tuple_permutations
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 9 passed in 0.06s ==========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_38"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_38_1" aria-expanded="false" aria-controls="job_list___sub_collapse_38_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_38_1"><button class="btn btn-outline-success"><span class="job_id">38 : Job ID ffe7ff26e3bb44269d12a4d096fe07bf</span></button></div></a><div aria-labelledby="job_list___sub_heading_38_1" data-parent="#job_list___sub_accordion_38" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_38_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=44" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (44, 14), end pos: (44, 15)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 3</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -41,7 +41,7 @@
+ def tuple_pattern_matching(tup):
+     """Small function to test pattern matching for tuples"""
+     match tup:
+-        case (0, 0):
++        case ( -1, 0):
+             return "explicitely got two 0"
+ 
+         case (0, _y):</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py .........F
+
+=================================== FAILURES ===================================
+__________ TestTuplePatternMatching.test_two_items_tuple_permutations __________
+
+self = &lt;pattern_matching_test.TestTuplePatternMatching testMethod=test_two_items_tuple_permutations&gt;
+
+    def test_two_items_tuple_permutations(self):
+&gt;       self.assertEqual(tuple_pattern_matching((0, 0)), "explicitely got two 0")
+E       AssertionError: 'got explicit 0 and any other value' != 'explicitely got two 0'
+E       - got explicit 0 and any other value
+E       + explicitely got two 0
+
+tests/pattern_matching/pattern_matching_test.py:42: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestTuplePatternMatching::test_two_items_tuple_permutations
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 9 passed in 0.05s ==========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_39"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_39_1" aria-expanded="false" aria-controls="job_list___sub_collapse_39_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_39_1"><button class="btn btn-outline-success"><span class="job_id">39 : Job ID 90699df5bbfe42d0b15421e6561e5094</span></button></div></a><div aria-labelledby="job_list___sub_heading_39_1" data-parent="#job_list___sub_accordion_39" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_39_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=44" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (44, 17), end pos: (44, 18)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 4</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -41,7 +41,7 @@
+ def tuple_pattern_matching(tup):
+     """Small function to test pattern matching for tuples"""
+     match tup:
+-        case (0, 0):
++        case (0, 1):
+             return "explicitely got two 0"
+ 
+         case (0, _y):</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py .........F
+
+=================================== FAILURES ===================================
+__________ TestTuplePatternMatching.test_two_items_tuple_permutations __________
+
+self = &lt;pattern_matching_test.TestTuplePatternMatching testMethod=test_two_items_tuple_permutations&gt;
+
+    def test_two_items_tuple_permutations(self):
+&gt;       self.assertEqual(tuple_pattern_matching((0, 0)), "explicitely got two 0")
+E       AssertionError: 'got explicit 0 and any other value' != 'explicitely got two 0'
+E       - got explicit 0 and any other value
+E       + explicitely got two 0
+
+tests/pattern_matching/pattern_matching_test.py:42: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestTuplePatternMatching::test_two_items_tuple_permutations
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 9 passed in 0.06s ==========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_40"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_40_1" aria-expanded="false" aria-controls="job_list___sub_collapse_40_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_40_1"><button class="btn btn-outline-success"><span class="job_id">40 : Job ID da74ac208c804d9c89555dfbf8c27929</span></button></div></a><div aria-labelledby="job_list___sub_heading_40_1" data-parent="#job_list___sub_accordion_40" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_40_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=44" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (44, 17), end pos: (44, 18)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 5</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -41,7 +41,7 @@
+ def tuple_pattern_matching(tup):
+     """Small function to test pattern matching for tuples"""
+     match tup:
+-        case (0, 0):
++        case (0, -1):
+             return "explicitely got two 0"
+ 
+         case (0, _y):</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py .........F
+
+=================================== FAILURES ===================================
+__________ TestTuplePatternMatching.test_two_items_tuple_permutations __________
+
+self = &lt;pattern_matching_test.TestTuplePatternMatching testMethod=test_two_items_tuple_permutations&gt;
+
+    def test_two_items_tuple_permutations(self):
+&gt;       self.assertEqual(tuple_pattern_matching((0, 0)), "explicitely got two 0")
+E       AssertionError: 'got explicit 0 and any other value' != 'explicitely got two 0'
+E       - got explicit 0 and any other value
+E       + explicitely got two 0
+
+tests/pattern_matching/pattern_matching_test.py:42: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestTuplePatternMatching::test_two_items_tuple_permutations
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 9 passed in 0.06s ==========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_41"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_41_1" aria-expanded="false" aria-controls="job_list___sub_collapse_41_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_41_1"><button class="btn btn-outline-success"><span class="job_id">41 : Job ID 31823b60ba3d4cfca483c13d28d8fb43</span></button></div></a><div aria-labelledby="job_list___sub_heading_41_1" data-parent="#job_list___sub_accordion_41" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_41_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=47" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (47, 14), end pos: (47, 15)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 6</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -44,7 +44,7 @@
+         case (0, 0):
+             return "explicitely got two 0"
+ 
+-        case (0, _y):
++        case ( 1, _y):
+             return "got explicit 0 and any other value"
+ 
+         case (_x, 0):</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py .....F
+
+=================================== FAILURES ===================================
+__________ TestTuplePatternMatching.test_any_type_for_dynamic_values ___________
+
+self = &lt;pattern_matching_test.TestTuplePatternMatching testMethod=test_any_type_for_dynamic_values&gt;
+
+    def test_any_type_for_dynamic_values(self):
+&gt;       self.assertEqual(
+            tuple_pattern_matching((0, "a")), "got explicit 0 and any other value"
+        )
+E       AssertionError: 'got any two values which are not 0' != 'got explicit 0 and any other value'
+E       - got any two values which are not 0
+E       + got explicit 0 and any other value
+
+tests/pattern_matching/pattern_matching_test.py:54: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestTuplePatternMatching::test_any_type_for_dynamic_values
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 5 passed in 0.05s ==========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_42"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_42_1" aria-expanded="false" aria-controls="job_list___sub_collapse_42_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_42_1"><button class="btn btn-outline-success"><span class="job_id">42 : Job ID 3e8f0c1959214bcf8510e625dbaba4b9</span></button></div></a><div aria-labelledby="job_list___sub_heading_42_1" data-parent="#job_list___sub_accordion_42" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_42_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=47" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (47, 14), end pos: (47, 15)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 7</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -44,7 +44,7 @@
+         case (0, 0):
+             return "explicitely got two 0"
+ 
+-        case (0, _y):
++        case ( -1, _y):
+             return "got explicit 0 and any other value"
+ 
+         case (_x, 0):</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py .....F
+
+=================================== FAILURES ===================================
+__________ TestTuplePatternMatching.test_any_type_for_dynamic_values ___________
+
+self = &lt;pattern_matching_test.TestTuplePatternMatching testMethod=test_any_type_for_dynamic_values&gt;
+
+    def test_any_type_for_dynamic_values(self):
+&gt;       self.assertEqual(
+            tuple_pattern_matching((0, "a")), "got explicit 0 and any other value"
+        )
+E       AssertionError: 'got any two values which are not 0' != 'got explicit 0 and any other value'
+E       - got any two values which are not 0
+E       + got explicit 0 and any other value
+
+tests/pattern_matching/pattern_matching_test.py:54: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestTuplePatternMatching::test_any_type_for_dynamic_values
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 5 passed in 0.05s ==========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_43"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_43_1" aria-expanded="false" aria-controls="job_list___sub_collapse_43_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_43_1"><button class="btn btn-outline-success"><span class="job_id">43 : Job ID b1f83e3442bf47d8b160bfa9d7236098</span></button></div></a><div aria-labelledby="job_list___sub_heading_43_1" data-parent="#job_list___sub_accordion_43" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_43_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=50" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (50, 18), end pos: (50, 19)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 8</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -47,7 +47,7 @@
+         case (0, _y):
+             return "got explicit 0 and any other value"
+ 
+-        case (_x, 0):
++        case (_x, 1):
+             return "got any value and an explicit 0"
+ 
+         case (_x, _y):</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py .....F
+
+=================================== FAILURES ===================================
+__________ TestTuplePatternMatching.test_any_type_for_dynamic_values ___________
+
+self = &lt;pattern_matching_test.TestTuplePatternMatching testMethod=test_any_type_for_dynamic_values&gt;
+
+    def test_any_type_for_dynamic_values(self):
+        self.assertEqual(
+            tuple_pattern_matching((0, "a")), "got explicit 0 and any other value"
+        )
+&gt;       self.assertEqual(
+            tuple_pattern_matching(([], 0)), "got any value and an explicit 0"
+        )
+E       AssertionError: 'got any two values which are not 0' != 'got any value and an explicit 0'
+E       - got any two values which are not 0
+E       + got any value and an explicit 0
+
+tests/pattern_matching/pattern_matching_test.py:57: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestTuplePatternMatching::test_any_type_for_dynamic_values
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 5 passed in 0.06s ==========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_44"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_44_1" aria-expanded="false" aria-controls="job_list___sub_collapse_44_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_44_1"><button class="btn btn-outline-success"><span class="job_id">44 : Job ID 60e891aca8f74d73b2b0262cd8ebce4f</span></button></div></a><div aria-labelledby="job_list___sub_heading_44_1" data-parent="#job_list___sub_accordion_44" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_44_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=50" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (50, 18), end pos: (50, 19)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 9</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -47,7 +47,7 @@
+         case (0, _y):
+             return "got explicit 0 and any other value"
+ 
+-        case (_x, 0):
++        case (_x, -1):
+             return "got any value and an explicit 0"
+ 
+         case (_x, _y):</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py .....F
+
+=================================== FAILURES ===================================
+__________ TestTuplePatternMatching.test_any_type_for_dynamic_values ___________
+
+self = &lt;pattern_matching_test.TestTuplePatternMatching testMethod=test_any_type_for_dynamic_values&gt;
+
+    def test_any_type_for_dynamic_values(self):
+        self.assertEqual(
+            tuple_pattern_matching((0, "a")), "got explicit 0 and any other value"
+        )
+&gt;       self.assertEqual(
+            tuple_pattern_matching(([], 0)), "got any value and an explicit 0"
+        )
+E       AssertionError: 'got any two values which are not 0' != 'got any value and an explicit 0'
+E       - got any two values which are not 0
+E       + got any value and an explicit 0
+
+tests/pattern_matching/pattern_matching_test.py:57: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestTuplePatternMatching::test_any_type_for_dynamic_values
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 5 passed in 0.06s ==========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_45"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_45_1" aria-expanded="false" aria-controls="job_list___sub_collapse_45_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_45_1"><button class="btn btn-outline-success"><span class="job_id">45 : Job ID 53dc75ce749a468eb7e3f99f7b195e92</span></button></div></a><div aria-labelledby="job_list___sub_heading_45_1" data-parent="#job_list___sub_accordion_45" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_45_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=69" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (69, 14), end pos: (69, 15)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 10</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -66,7 +66,7 @@
+         case []:
+             return "explicit empty array"
+ 
+-        case [0, 0]:
++        case [ 1, 0]:
+             return "explicitely two 0"
+ 
+         case [0, _x]:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py ..........F
+
+=================================== FAILURES ===================================
+_____________ TestArrayPatternMatching.test_array_pattern_matching _____________
+
+self = &lt;pattern_matching_test.TestArrayPatternMatching testMethod=test_array_pattern_matching&gt;
+
+    def test_array_pattern_matching(self):
+        self.assertEqual(array_pattern_matching([]), "explicit empty array")
+&gt;       self.assertEqual(array_pattern_matching([0, 0]), "explicitely two 0")
+E       AssertionError: 'got explicit 0 and any other value' != 'explicitely two 0'
+E       - got explicit 0 and any other value
+E       + explicitely two 0
+
+tests/pattern_matching/pattern_matching_test.py:80: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestArrayPatternMatching::test_array_pattern_matching
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 10 passed in 0.05s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_46"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_46_1" aria-expanded="false" aria-controls="job_list___sub_collapse_46_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_46_1"><button class="btn btn-outline-success"><span class="job_id">46 : Job ID c8456b06775c42078f4557192227e6ba</span></button></div></a><div aria-labelledby="job_list___sub_heading_46_1" data-parent="#job_list___sub_accordion_46" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_46_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=69" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (69, 14), end pos: (69, 15)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 11</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -66,7 +66,7 @@
+         case []:
+             return "explicit empty array"
+ 
+-        case [0, 0]:
++        case [ -1, 0]:
+             return "explicitely two 0"
+ 
+         case [0, _x]:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py ..........F
+
+=================================== FAILURES ===================================
+_____________ TestArrayPatternMatching.test_array_pattern_matching _____________
+
+self = &lt;pattern_matching_test.TestArrayPatternMatching testMethod=test_array_pattern_matching&gt;
+
+    def test_array_pattern_matching(self):
+        self.assertEqual(array_pattern_matching([]), "explicit empty array")
+&gt;       self.assertEqual(array_pattern_matching([0, 0]), "explicitely two 0")
+E       AssertionError: 'got explicit 0 and any other value' != 'explicitely two 0'
+E       - got explicit 0 and any other value
+E       + explicitely two 0
+
+tests/pattern_matching/pattern_matching_test.py:80: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestArrayPatternMatching::test_array_pattern_matching
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 10 passed in 0.05s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_47"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_47_1" aria-expanded="false" aria-controls="job_list___sub_collapse_47_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_47_1"><button class="btn btn-outline-success"><span class="job_id">47 : Job ID be223dcfaf684285bff5a7e59ecd38cf</span></button></div></a><div aria-labelledby="job_list___sub_heading_47_1" data-parent="#job_list___sub_accordion_47" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_47_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=69" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (69, 17), end pos: (69, 18)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 12</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -66,7 +66,7 @@
+         case []:
+             return "explicit empty array"
+ 
+-        case [0, 0]:
++        case [0, 1]:
+             return "explicitely two 0"
+ 
+         case [0, _x]:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py ..........F
+
+=================================== FAILURES ===================================
+_____________ TestArrayPatternMatching.test_array_pattern_matching _____________
+
+self = &lt;pattern_matching_test.TestArrayPatternMatching testMethod=test_array_pattern_matching&gt;
+
+    def test_array_pattern_matching(self):
+        self.assertEqual(array_pattern_matching([]), "explicit empty array")
+&gt;       self.assertEqual(array_pattern_matching([0, 0]), "explicitely two 0")
+E       AssertionError: 'got explicit 0 and any other value' != 'explicitely two 0'
+E       - got explicit 0 and any other value
+E       + explicitely two 0
+
+tests/pattern_matching/pattern_matching_test.py:80: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestArrayPatternMatching::test_array_pattern_matching
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 10 passed in 0.06s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_48"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_48_1" aria-expanded="false" aria-controls="job_list___sub_collapse_48_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_48_1"><button class="btn btn-outline-success"><span class="job_id">48 : Job ID c29636123c114d198b20ffede281b81f</span></button></div></a><div aria-labelledby="job_list___sub_heading_48_1" data-parent="#job_list___sub_accordion_48" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_48_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=69" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (69, 17), end pos: (69, 18)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 13</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -66,7 +66,7 @@
+         case []:
+             return "explicit empty array"
+ 
+-        case [0, 0]:
++        case [0, -1]:
+             return "explicitely two 0"
+ 
+         case [0, _x]:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py ..........F
+
+=================================== FAILURES ===================================
+_____________ TestArrayPatternMatching.test_array_pattern_matching _____________
+
+self = &lt;pattern_matching_test.TestArrayPatternMatching testMethod=test_array_pattern_matching&gt;
+
+    def test_array_pattern_matching(self):
+        self.assertEqual(array_pattern_matching([]), "explicit empty array")
+&gt;       self.assertEqual(array_pattern_matching([0, 0]), "explicitely two 0")
+E       AssertionError: 'got explicit 0 and any other value' != 'explicitely two 0'
+E       - got explicit 0 and any other value
+E       + explicitely two 0
+
+tests/pattern_matching/pattern_matching_test.py:80: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestArrayPatternMatching::test_array_pattern_matching
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 10 passed in 0.05s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_49"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_49_1" aria-expanded="false" aria-controls="job_list___sub_collapse_49_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_49_1"><button class="btn btn-outline-success"><span class="job_id">49 : Job ID 195c275ce68a418a9eceddfb058d6311</span></button></div></a><div aria-labelledby="job_list___sub_heading_49_1" data-parent="#job_list___sub_accordion_49" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_49_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=72" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (72, 14), end pos: (72, 15)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 14</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -69,7 +69,7 @@
+         case [0, 0]:
+             return "explicitely two 0"
+ 
+-        case [0, _x]:
++        case [ 1, _x]:
+             return "got explicit 0 and any other value"
+ 
+         case [0, *_]:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py ..........F
+
+=================================== FAILURES ===================================
+_____________ TestArrayPatternMatching.test_array_pattern_matching _____________
+
+self = &lt;pattern_matching_test.TestArrayPatternMatching testMethod=test_array_pattern_matching&gt;
+
+    def test_array_pattern_matching(self):
+        self.assertEqual(array_pattern_matching([]), "explicit empty array")
+        self.assertEqual(array_pattern_matching([0, 0]), "explicitely two 0")
+&gt;       self.assertEqual(
+            array_pattern_matching([0, 10]), "got explicit 0 and any other value"
+        )
+E       AssertionError: 'array starting with 0 and with 2+ items' != 'got explicit 0 and any other value'
+E       - array starting with 0 and with 2+ items
+E       + got explicit 0 and any other value
+
+tests/pattern_matching/pattern_matching_test.py:81: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestArrayPatternMatching::test_array_pattern_matching
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 10 passed in 0.07s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_50"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_50_1" aria-expanded="false" aria-controls="job_list___sub_collapse_50_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_50_1"><button class="btn btn-outline-success"><span class="job_id">50 : Job ID f909205d778b439fa3d0199c21a2ea47</span></button></div></a><div aria-labelledby="job_list___sub_heading_50_1" data-parent="#job_list___sub_accordion_50" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_50_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=72" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (72, 14), end pos: (72, 15)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 15</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -69,7 +69,7 @@
+         case [0, 0]:
+             return "explicitely two 0"
+ 
+-        case [0, _x]:
++        case [ -1, _x]:
+             return "got explicit 0 and any other value"
+ 
+         case [0, *_]:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py ..........F
+
+=================================== FAILURES ===================================
+_____________ TestArrayPatternMatching.test_array_pattern_matching _____________
+
+self = &lt;pattern_matching_test.TestArrayPatternMatching testMethod=test_array_pattern_matching&gt;
+
+    def test_array_pattern_matching(self):
+        self.assertEqual(array_pattern_matching([]), "explicit empty array")
+        self.assertEqual(array_pattern_matching([0, 0]), "explicitely two 0")
+&gt;       self.assertEqual(
+            array_pattern_matching([0, 10]), "got explicit 0 and any other value"
+        )
+E       AssertionError: 'array starting with 0 and with 2+ items' != 'got explicit 0 and any other value'
+E       - array starting with 0 and with 2+ items
+E       + got explicit 0 and any other value
+
+tests/pattern_matching/pattern_matching_test.py:81: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestArrayPatternMatching::test_array_pattern_matching
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 10 passed in 0.05s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_51"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_51_1" aria-expanded="false" aria-controls="job_list___sub_collapse_51_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_51_1"><button class="btn btn-outline-success"><span class="job_id">51 : Job ID 5c81f51120ee462cb4f7d995bafe7ef2</span></button></div></a><div aria-labelledby="job_list___sub_heading_51_1" data-parent="#job_list___sub_accordion_51" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_51_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=75" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (75, 14), end pos: (75, 15)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 16</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -72,7 +72,7 @@
+         case [0, _x]:
+             return "got explicit 0 and any other value"
+ 
+-        case [0, *_]:
++        case [ 1, *_]:
+             return "array starting with 0 and with 2+ items"
+ 
+         case [*_]:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py ..........F
+
+=================================== FAILURES ===================================
+_____________ TestArrayPatternMatching.test_array_pattern_matching _____________
+
+self = &lt;pattern_matching_test.TestArrayPatternMatching testMethod=test_array_pattern_matching&gt;
+
+    def test_array_pattern_matching(self):
+        self.assertEqual(array_pattern_matching([]), "explicit empty array")
+        self.assertEqual(array_pattern_matching([0, 0]), "explicitely two 0")
+        self.assertEqual(
+            array_pattern_matching([0, 10]), "got explicit 0 and any other value"
+        )
+&gt;       self.assertEqual(
+            array_pattern_matching([0, 10, 99]),
+            "array starting with 0 and with 2+ items",
+        )
+E       AssertionError: 'catch all non-previously covered cases of arrays with undetermined lengths' != 'array starting with 0 and with 2+ items'
+E       - catch all non-previously covered cases of arrays with undetermined lengths
+E       + array starting with 0 and with 2+ items
+
+tests/pattern_matching/pattern_matching_test.py:84: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestArrayPatternMatching::test_array_pattern_matching
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 10 passed in 0.05s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_52"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_52_1" aria-expanded="false" aria-controls="job_list___sub_collapse_52_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_52_1"><button class="btn btn-outline-success"><span class="job_id">52 : Job ID e3d050a6b8a94c44aba4c4831a5fc641</span></button></div></a><div aria-labelledby="job_list___sub_heading_52_1" data-parent="#job_list___sub_accordion_52" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_52_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: WorkerOutcome.NORMAL</p><p>test outcome: TestOutcome.KILLED</p></div></div><pre class="location"><a href="pycharm://open?file=src/learning_python/pattern_matching/pattern_matching.py&amp;line=75" class="text-secondary"><button class="btn btn-outline-dark">src/learning_python/pattern_matching/pattern_matching.py, start pos: (75, 14), end pos: (75, 15)</button></a></pre><pre>operator: core/NumberReplacer, occurrence: 17</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- asrc/learning_python/pattern_matching/pattern_matching.py
++++ bsrc/learning_python/pattern_matching/pattern_matching.py
+@@ -72,7 +72,7 @@
+         case [0, _x]:
+             return "got explicit 0 and any other value"
+ 
+-        case [0, *_]:
++        case [ -1, *_]:
+             return "array starting with 0 and with 2+ items"
+ 
+         case [*_]:</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/maxime/Developpement/Perso/learning-python
+configfile: pyproject.toml
+plugins: cov-6.2.1
+collected 14 items
+
+tests/pattern_matching/pattern_matching_test.py ..........F
+
+=================================== FAILURES ===================================
+_____________ TestArrayPatternMatching.test_array_pattern_matching _____________
+
+self = &lt;pattern_matching_test.TestArrayPatternMatching testMethod=test_array_pattern_matching&gt;
+
+    def test_array_pattern_matching(self):
+        self.assertEqual(array_pattern_matching([]), "explicit empty array")
+        self.assertEqual(array_pattern_matching([0, 0]), "explicitely two 0")
+        self.assertEqual(
+            array_pattern_matching([0, 10]), "got explicit 0 and any other value"
+        )
+&gt;       self.assertEqual(
+            array_pattern_matching([0, 10, 99]),
+            "array starting with 0 and with 2+ items",
+        )
+E       AssertionError: 'catch all non-previously covered cases of arrays with undetermined lengths' != 'array starting with 0 and with 2+ items'
+E       - catch all non-previously covered cases of arrays with undetermined lengths
+E       + array starting with 0 and with 2+ items
+
+tests/pattern_matching/pattern_matching_test.py:84: AssertionError
+=========================== short test summary info ============================
+FAILED tests/pattern_matching/pattern_matching_test.py::TestArrayPatternMatching::test_array_pattern_matching
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+========================= 1 failed, 10 passed in 0.06s =========================
+</pre></div></div></div></div></div></div></div></div></div></div><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script type="text/javascript">$('div.job_list___sub_multi_collapse').on('shown.bs.collapse',  function () {    correct_behavior_functional_buttons();  });$('div.job_list___sub_multi_collapse').on('hidden.bs.collapse',  function () {    correct_behavior_functional_buttons();  });function correct_behavior_functional_buttons() {    var expand = false;    var collapse = false;    $('a.job_list___sub_multi_heading').each(function(index) {      if ($(this).attr('aria-expanded') == 'false') {        expand = true;        return false;      };    });    $('a.job_list___sub_multi_heading').each(function(index) {      if ($(this).attr('aria-expanded') == 'true') {        collapse = true;        return false;      };    });    if (expand) {      $('div#job_item_expand_all').css('display', 'inline-block');    } else {      $('div#job_item_expand_all').css('display', 'none');    };    if (collapse) {      $('div#job_item_collapse_all').css('display', 'inline-block');    } else {      $('div#job_item_collapse_all').css('display', 'none');    };  };correct_behavior_functional_buttons();</script></body></html>
