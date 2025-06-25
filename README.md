@@ -60,12 +60,11 @@ Run the tests with:
 
 ### Running the mutation tests using cosmic-ray
 
-In order to run the mutation tests, a two-step process is needed.
+In order to run the mutation tests, a three-step process is needed.
 For now, the tests are not parallelized.
 
 Needed improvements for a real use case:
 [ ] Parallelize the tests in an automated fashion (i.e. not having to start the servers manually)
-[ ] Get the code directly from github (for tests run from a CI for example)
 
 #### Start the workers to parallelize the tests
 
@@ -76,13 +75,14 @@ To avoid that, the config we use will start servers to parallelize the tests ove
     uv run cr-http-workers pyproject.toml .
 ```
 
-To get the code from github, replace `.` at the end of the command with your repo's URL.
+To get the code to copy for each worker from github, replace `.` at the end of the command with your repo's URL.
+Here we copy the local code to the workers' directories.
 
 For now there are two workers in the config, but you can add more as needed.
 
 #### Prepare a database to persist the session's results
 
-First we need to start a session to store the results. In our case, we'll do it everytime we run the tests:
+Then, we need to start a session to store the results. In our case, we'll do it everytime we run the tests:
 
 ```
     uvx cosmic-ray init --force pyproject.toml mutation-tests.sqlite
@@ -112,3 +112,5 @@ Or if you want to keep the results / want a report that's a bit more readable:
 ```
     uv run cr-html mutation-tests.sqlite > mutation-tests-report.html
 ```
+
+If you're done with the workers, you can kill the processes in the relevant terminal.
