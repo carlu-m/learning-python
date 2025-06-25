@@ -1,5 +1,7 @@
 # learning-python
 
+![badge-for-mutation-testing-score](./mutation-testing-score.svg)
+
 Project to explore Python's possibilities:
 
 ## Overview of the project and goals
@@ -65,6 +67,7 @@ For now, the tests are not parallelized.
 
 Needed improvements for a real use case:
 [ ] Parallelize the tests in an automated fashion (i.e. not having to start the servers manually)
+[ ] Make badge generation automatic so that the badge always reflects the latest score (instead of the score of the latest committed svg)
 
 #### Start the workers to parallelize the tests
 
@@ -114,3 +117,14 @@ Or if you want to keep the results / want a report that's a bit more readable:
 ```
 
 If you're done with the workers, you can kill the processes in the relevant terminal.
+
+#### Generate the badge
+
+There is currently no option to "fail" the mutation step like for test coverage.
+So, instead, what we can do is generate a badge to at least make it visible:
+
+```
+    uv run cr-badge pyproject.toml mutation-testing-score mutation-tests.sqlite
+```
+
+It does have some caveat in the current version though, we need to run the tests locally, generate the badge, and commit the svg, so a lot of manual steps are involved (and rely on a developper's good-will / remembering the steps)
