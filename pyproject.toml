@@ -12,14 +12,15 @@ classifiers = ["Private :: Do Not Upload"]
 
 [dependency-groups]
 dev = [
+    "cosmic-ray>=8.4.1",
     "pytest>=8.4.1",
     "pytest-cov>=6.2.1",
     "ruff>=0.12.0",
 ]
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["uv_build>=0.7.13,<0.8.0"]
+build-backend = "uv_build"
 
 [project.scripts]
 learning-python = "learning_python:main"
@@ -35,7 +36,20 @@ minversion = "3.12"
 
 [tool.coverage.run]
 branch = "true"
-omit = ["src/**/__init__.py"]
+omit = [
+    "src/**/__init__.py"
+]
 
 [tool.coverage.report]
 fail_under = "100"
+
+[cosmic-ray]
+module-path = "src"
+timeout = 5.0
+excluded-modules = [
+    "src/**/__init__.py"
+]
+test-command = "uv run pytest"
+
+[cosmic-ray.distributor]
+name = "local"
