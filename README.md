@@ -26,7 +26,7 @@ Things that have been tested for now / list of ideas for later:
 - [X] Add a pre-commit linting & formatting hook
 - [X] Create unit tests
 - [X] Configure test coverage
-- [ ] Setup & configure mutation testing
+- [X] Setup & configure mutation testing
 
 ## Project requirements
 
@@ -48,7 +48,7 @@ Run
     uv sync
 ```
 
-### Running the tests
+### Running the unit tests using pytest
 
 There is no feature per se in this project, only a list of language features with associated unit tests to try out different possibilities:
 
@@ -57,3 +57,60 @@ Run the tests with:
 ```
     uv run pytest
 ```
+
+### Running the mutation tests using cosmic-ray
+
+In order to run the mutation tests, a three-step process is needed.
+For now, the tests are not parallelized.
+
+Needed improvements for a real use case:
+[ ] Parallelize the tests in an automated fashion (i.e. not having to start the servers manually)
+
+#### Start the workers to parallelize the tests
+
+By default, running the tests locally will mutate your original code instead of a copy, and the tests won't be run in parallel.
+To avoid that, the config we use will start servers to parallelize the tests over multiple workers, by using this command:
+
+```
+    uv run cr-http-workers pyproject.toml .
+```
+
+To get the code to copy for each worker from github, replace `.` at the end of the command with your repo's URL.
+Here we copy the local code to the workers' directories.
+
+For now there are two workers in the config, but you can add more as needed.
+
+#### Prepare a database to persist the session's results
+
+Then, we need to start a session to store the results. In our case, we'll do it everytime we run the tests:
+
+```
+    uvx cosmic-ray init --force pyproject.toml mutation-tests.sqlite
+```
+
+#### Run the mutations
+
+Then, in another terminal, run the tests themselves with:
+
+```
+    uvx cosmic-ray exec pyproject.toml mutation-tests.sqlite
+```
+
+Since the config uses the `http` mode instead of `local`, ait will use the workers we've defined in the config and parallelize the tests on them automatically.
+You will see logs on the terminal with the servers as the tests are being processed.
+
+#### Check / persist the report
+
+Finally, once the exec has finished running (or even while it is running), check the results / progress with
+
+```
+    uv run cr-report mutation-tests.sqlite --show-pending
+```
+
+Or if you want to keep the results / want a report that's a bit more readable:
+
+```
+    uv run cr-html mutation-tests.sqlite > mutation-tests-report.html
+```
+
+If you're done with the workers, you can kill the processes in the relevant terminal.
