@@ -49,7 +49,7 @@ timeout = 5.0
 excluded-modules = [
     "src/**/__init__.py"
 ]
-test-command = "uv run pytest"
+test-command = "uv run pytest -x"
 
 [cosmic-ray.distributor]
 name = "http"
