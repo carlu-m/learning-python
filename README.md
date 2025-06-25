@@ -26,7 +26,7 @@ Things that have been tested for now / list of ideas for later:
 - [X] Add a pre-commit linting & formatting hook
 - [X] Create unit tests
 - [X] Configure test coverage
-- [ ] Setup & configure mutation testing
+- [X] Setup & configure mutation testing
 
 ## Project requirements
 
@@ -64,28 +64,40 @@ In order to run the mutation tests, a two-step process is needed.
 For now, the tests are not parallelized.
 
 Needed improvements for a real use case:
-[ ] Use workers even locally to avoir mutating the original code
 [ ] Parallelize the tests in an automated fashion (i.e. not having to start the servers manually)
 [ ] Get the code directly from github (for tests run from a CI for example)
+
+#### Start the workers to parallelize the tests
+
+By default, running the tests locally will mutate your original code instead of a copy, and the tests won't be run in parallel.
+To avoid that, the config we use will start servers to parallelize the tests over multiple workers, by using this command:
+
+```
+    uv run cr-http-workers pyproject.toml .
+```
+
+To get the code from github, replace `.` at the end of the command with your repo's URL.
+
+For now there are two workers in the config, but you can add more as needed.
 
 #### Prepare a database to persist the session's results
 
 First we need to start a session to store the results. In our case, we'll do it everytime we run the tests:
 
 ```
-    uvx cosmic-ray init pyproject.toml mutation-tests.sqlite
+    uvx cosmic-ray init --force pyproject.toml mutation-tests.sqlite
 ```
 
 #### Run the mutations
 
-As per the official documentation and if running the tests in a local dev environment, **commit your code**
-It shouldn't happen but technically, mutations can fail to be reverted since the real code is being mutated.
-
-Then, run the tests themselves with:
+Then, in another terminal, run the tests themselves with:
 
 ```
     uvx cosmic-ray exec pyproject.toml mutation-tests.sqlite
 ```
+
+Since the config uses the `http` mode instead of `local`, ait will use the workers we've defined in the config and parallelize the tests on them automatically.
+You will see logs on the terminal with the servers as the tests are being processed.
 
 #### Check / persist the report
 
