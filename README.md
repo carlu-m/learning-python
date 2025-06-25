@@ -1,6 +1,6 @@
 # learning-python
 
-![badge-for-mutation-testing-score](./mutation-testing-score.svg)
+![badge-for-mutation-testing-score](./mutation-testing-badge.svg)
 
 Project to explore Python's possibilities:
 
@@ -124,7 +124,7 @@ There is currently no option to "fail" the mutation step like for test coverage.
 So, instead, what we can do is generate a badge to at least make it visible:
 
 ```
-    uv run cr-badge pyproject.toml mutation-testing-score mutation-tests.sqlite
+    uv run cr-badge pyproject.toml mutation-testing-badge mutation-tests.sqlite
 ```
 
 It does have some caveat in the current version though, we need to run the tests locally, generate the badge, and commit the svg, so a lot of manual steps are involved (and rely on a developper's good-will / remembering the steps)
