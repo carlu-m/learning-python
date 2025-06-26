@@ -25,8 +25,18 @@ build-backend = "uv_build"
 [project.scripts]
 learning-python = "learning_python:main"
 
+[tool.ruff]
+line-length = 79
+indent-width = 4
+
 [tool.ruff.lint]
-extend-select = ["B"]
+extend-select = [
+    "B", 
+    "E", 
+    "ERA001", # Commented out code
+    "N", 
+    "W"
+]
 
 [tool.pytest.ini_options]
 addopts = "--maxfail=1 --cov=learning_python"

@@ -25,6 +25,8 @@ Things that have been tested for now / list of ideas for later:
 - [X] Creating the project from scratch (here uv was chosen to handle a lot of things)
 - [X] Add a linter
 - [X] Add a formatter
+- [ ] Configure ruff to implement PEP 8 conventions
+- [ ] Configure ruff to implement the chosen rules
 - [X] Add a pre-commit linting & formatting hook
 - [X] Create unit tests
 - [X] Configure test coverage
