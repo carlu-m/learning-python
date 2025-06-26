@@ -15,7 +15,10 @@ Learn & try out the pure language features:
 
 ### Ecosystem tooling
 
-Learn about the ecosystem's tooling & experiment with it
+Learn about the ecosystem's tooling & experiment with it.
+
+NB: the test coverage & mutation tests are only based on a single module, which exists only for these reports, as a proof of concept.
+The rest of Python's features which are being tried out are directly in the test files, since it would be annoying / redundant to have to create functions for really simple cases (e.g. create a function just to test an operator, f-strings, etc), and these won't generate coverage results (since there is no module).
 
 Things that have been tested for now / list of ideas for later:
 
@@ -30,7 +33,10 @@ Things that have been tested for now / list of ideas for later:
 - [X] Add a pre-commit linting & formatting hook
 - [X] Create unit tests
 - [X] Configure test coverage
-- [X] Setup & configure mutation testing
+- [ ] Read pytest's doc to know about its features beyond the basic ones
+- [X] Compare mutation testing libraries
+- [X] Setup & configure mutation testing with the chosen lib (cosmic-rays)
+- [X] Read cosmic-ray's doc to know about its features beyond the basic ones
 
 ## Project requirements
 

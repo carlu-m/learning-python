@@ -66,6 +66,7 @@ omit = [
 ]
 
 [tool.coverage.report]
+include_namespace_packages = true
 fail_under = "100"
 
 [cosmic-ray]
