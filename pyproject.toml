@@ -4,11 +4,22 @@ version = "0.1.0"
 description = "Project to explore Python's possibilities"
 readme = "README.md"
 authors = [
-    { name = "Maxime C.", email = "carlu.m@sfeir.com" }
+    { name = "Maxime CARLU", email = "carlu.m@sfeir.com" }
 ]
 requires-python = ">=3.12"
+keywords = [
+    "software engineering",
+]
+classifiers = [
+    "Private :: Do Not Upload",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+]
 dependencies = []
-classifiers = ["Private :: Do Not Upload"]
 
 [dependency-groups]
 dev = [
@@ -17,6 +28,10 @@ dev = [
     "pytest-cov>=6.2.1",
     "ruff>=0.12.0",
 ]
+
+[project.urls]
+repository = "https://github.com/carlu-m/learning-python"
+documentation = "https://github.com/carlu-m/learning-python/blob/trunk/README.md"
 
 [build-system]
 requires = ["uv_build>=0.7.13,<0.8.0"]
