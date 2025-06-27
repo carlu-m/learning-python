@@ -29,7 +29,7 @@ Things that have been tested for now / list of ideas for later:
 - [X] Add a linter
 - [X] Add a formatter
 - [X] Configure ruff to implement PEP 8 conventions
-- [X] Configure ruff to implement the chosen rules
+- [X] Configure ruff to implement additionally chosen rules
 - [X] Add a pre-commit linting & formatting hook
 - [ ] Doctest to run your code against your documentation
 - [X] Create unit tests
