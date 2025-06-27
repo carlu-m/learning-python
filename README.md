@@ -28,9 +28,10 @@ Things that have been tested for now / list of ideas for later:
 - [X] Creating the project from scratch (here uv was chosen to handle a lot of things)
 - [X] Add a linter
 - [X] Add a formatter
-- [ ] Configure ruff to implement PEP 8 conventions
-- [ ] Configure ruff to implement the chosen rules
+- [X] Configure ruff to implement PEP 8 conventions
+- [X] Configure ruff to implement the chosen rules
 - [X] Add a pre-commit linting & formatting hook
+- [ ] Doc test to run your code against your doc and check if the doc is up to date
 - [X] Create unit tests
 - [X] Configure test coverage
 - [ ] Read pytest's doc to know about its features beyond the basic ones
@@ -38,7 +39,9 @@ Things that have been tested for now / list of ideas for later:
 - [X] Setup & configure mutation testing with the chosen lib (cosmic-rays)
 - [X] Read cosmic-ray's doc to know about its features beyond the basic ones
 
-Improvements that would be needed for a real use case:
+## Limitations & potential improvements
+
+- Linting rules exclude test files (which represent most of this project), so, apart from reading about them and adding them, I didn't really experiment with them
 - Mutation tests in a CI job / step would have to be adapted to take the parallelization into account, and we would need to manually ready the last line of the report to check for the score if we want to automatically succeed / fail the step.
 
 ## Project requirements
