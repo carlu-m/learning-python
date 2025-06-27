@@ -38,6 +38,9 @@ Things that have been tested for now / list of ideas for later:
 - [X] Setup & configure mutation testing with the chosen lib (cosmic-rays)
 - [X] Read cosmic-ray's doc to know about its features beyond the basic ones
 
+Improvements that would be needed for a real use case:
+- Mutation tests in a CI job / step would have to be adapted to take the parallelization into account, and we would need to manually ready the last line of the report to check for the score if we want to automatically succeed / fail the step.
+
 ## Project requirements
 
 ### Install uv globally
@@ -72,10 +75,6 @@ Run the tests with:
 
 In order to run the mutation tests, a three-step process is needed.
 For now, the tests are not parallelized.
-
-Needed improvements for a real use case:
-[ ] Parallelize the tests in an automated fashion (i.e. not having to start the servers manually)
-[ ] Make badge generation automatic so that the badge always reflects the latest score (instead of the score of the latest committed svg)
 
 #### Start the workers to parallelize the tests
 
@@ -112,27 +111,13 @@ You will see logs on the terminal with the servers as the tests are being proces
 
 #### Check / persist the report
 
-Finally, once the exec has finished running (or even while it is running), check the results / progress with
-
-```
-    uv run cr-report mutation-tests.sqlite --show-pending
-```
-
-Or if you want to keep the results / want a report that's a bit more readable:
+Finally, once the exec has finished running, export the results with:
 
 ```
     uv run cr-html mutation-tests.sqlite > mutation-tests-report.html
 ```
 
+This file should be commited before merging each branch as proof that the mutation tests have been run.
+Because of the parallelized nature of the mutation tests, there is no way to "fail" them, unlike when running the coverage command, and unlike other mutation tools in other languages, so this is the next best thing for now.
+
 If you're done with the workers, you can kill the processes in the relevant terminal.
-
-#### Generate the badge
-
-There is currently no option to "fail" the mutation step like for test coverage.
-So, instead, what we can do is generate a badge to at least make it visible:
-
-```
-    uv run cr-badge pyproject.toml mutation-testing-badge mutation-tests.sqlite
-```
-
-It does have some caveat in the current version though, we need to run the tests locally, generate the badge, and commit the svg, so a lot of manual steps are involved (and rely on a developper's good-will / remembering the steps)
