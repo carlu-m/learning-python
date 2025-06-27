@@ -11,11 +11,14 @@ Project to explore Python's possibilities:
 Learn & try out the pure language features:
 
 - Writing functions to try out different Python's language features (basic primitives & basic syntax, pattern matching, destructuration, functions' signatures, etc)
-- Write the associated unit tests to experiment and have a reference for later (instead of doing everything in the REPL) and see what works / does not work visually
+- Write the associated unit tests to experiment and have a logged / shareable reference for later (instead of doing everything in the REPL) and see what works / does not work visually
 
 ### Ecosystem tooling
 
-Learn about the ecosystem's tooling & experiment with it
+Learn about the ecosystem's tooling & experiment with it.
+
+NB: the test coverage & mutation tests are only based on a single module, which exists only for these reports, as a proof of concept.
+The rest of Python's features which are being tried out are directly in the test files, since it would be annoying / redundant to have to create functions for really simple cases (e.g. create a function just to test an operator, f-strings, etc), and these won't generate coverage results (since there is no module).
 
 Things that have been tested for now / list of ideas for later:
 
@@ -25,10 +28,21 @@ Things that have been tested for now / list of ideas for later:
 - [X] Creating the project from scratch (here uv was chosen to handle a lot of things)
 - [X] Add a linter
 - [X] Add a formatter
+- [X] Configure ruff to implement PEP 8 conventions
+- [X] Configure ruff to implement additionally chosen rules
 - [X] Add a pre-commit linting & formatting hook
+- [ ] Doctest to run your code against your documentation
 - [X] Create unit tests
 - [X] Configure test coverage
-- [X] Setup & configure mutation testing
+- [ ] Read pytest's doc to know about its features beyond the basic ones
+- [X] Compare mutation testing libraries
+- [X] Setup & configure mutation testing with the chosen lib (cosmic-rays)
+- [X] Read cosmic-ray's doc to know about its features beyond the basic ones
+
+## Limitations & potential improvements
+
+- Linting rules exclude test files (which represent most of this project), so, apart from reading about them and adding them, I didn't really experiment with them
+- Mutation tests in a CI job / step would have to be adapted to take the parallelization into account, and we would need to manually ready the last line of the report to check for the score if we want to automatically succeed / fail the step.
 
 ## Project requirements
 
@@ -65,10 +79,6 @@ Run the tests with:
 In order to run the mutation tests, a three-step process is needed.
 For now, the tests are not parallelized.
 
-Needed improvements for a real use case:
-[ ] Parallelize the tests in an automated fashion (i.e. not having to start the servers manually)
-[ ] Make badge generation automatic so that the badge always reflects the latest score (instead of the score of the latest committed svg)
-
 #### Start the workers to parallelize the tests
 
 By default, running the tests locally will mutate your original code instead of a copy, and the tests won't be run in parallel.
@@ -104,27 +114,13 @@ You will see logs on the terminal with the servers as the tests are being proces
 
 #### Check / persist the report
 
-Finally, once the exec has finished running (or even while it is running), check the results / progress with
-
-```
-    uv run cr-report mutation-tests.sqlite --show-pending
-```
-
-Or if you want to keep the results / want a report that's a bit more readable:
+Finally, once the exec has finished running, export the results with:
 
 ```
     uv run cr-html mutation-tests.sqlite > mutation-tests-report.html
 ```
 
+This file should be commited before merging each branch as proof that the mutation tests have been run.
+Because of the parallelized nature of the mutation tests, there is no way to "fail" them, unlike when running the coverage command, and unlike other mutation tools in other languages, so this is the next best thing for now.
+
 If you're done with the workers, you can kill the processes in the relevant terminal.
-
-#### Generate the badge
-
-There is currently no option to "fail" the mutation step like for test coverage.
-So, instead, what we can do is generate a badge to at least make it visible:
-
-```
-    uv run cr-badge pyproject.toml mutation-testing-badge mutation-tests.sqlite
-```
-
-It does have some caveat in the current version though, we need to run the tests locally, generate the badge, and commit the svg, so a lot of manual steps are involved (and rely on a developper's good-will / remembering the steps)
