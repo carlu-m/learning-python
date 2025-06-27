@@ -4,7 +4,7 @@ Note: the modules here only exist to generate coverage & mutation results.
 For the language experiments, have a look at the tests folder directly
 """
 
-from learning_python.test_coverage_and_mutations.coverage_and_mutations import (  # noqa: E501
+from .coverage_and_mutations import (
     simple_pattern_matching,
 )
 

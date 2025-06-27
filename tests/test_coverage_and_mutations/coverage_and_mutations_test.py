@@ -1,4 +1,4 @@
-from learning_python.test_coverage_and_mutations.coverage_and_mutations import (  # noqa: E501
+from learning_python import (
     simple_pattern_matching,
 )
 

@@ -56,7 +56,6 @@ extend-select = [
     "C4", # Comprehensions
     "COM", # Commas
     "D", # Pydoc
-    "DOC", # PyDoc
     "DTZ", # Datetime
     "E", # pycodestyle errors
     "EM", # Error messages
@@ -82,6 +81,15 @@ extend-select = [
     "TRY", # Exceptions
     "W", # pycodestyle warnings
 ]
+ignore = [
+    "D211",
+    "D213"
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
 
 [tool.pytest.ini_options]
 addopts = "--maxfail=1 --cov=learning_python"
