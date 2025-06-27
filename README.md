@@ -31,7 +31,7 @@ Things that have been tested for now / list of ideas for later:
 - [X] Configure ruff to implement PEP 8 conventions
 - [X] Configure ruff to implement the chosen rules
 - [X] Add a pre-commit linting & formatting hook
-- [ ] Doc test to run your code against your doc and check if the doc is up to date
+- [ ] Doctest to run your code against your documentation
 - [X] Create unit tests
 - [X] Configure test coverage
 - [ ] Read pytest's doc to know about its features beyond the basic ones
