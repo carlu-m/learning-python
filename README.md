@@ -11,7 +11,7 @@ Project to explore Python's possibilities:
 Learn & try out the pure language features:
 
 - Writing functions to try out different Python's language features (basic primitives & basic syntax, pattern matching, destructuration, functions' signatures, etc)
-- Write the associated unit tests to experiment and have a reference for later (instead of doing everything in the REPL) and see what works / does not work visually
+- Write the associated unit tests to experiment and have a logged / shareable reference for later (instead of doing everything in the REPL) and see what works / does not work visually
 
 ### Ecosystem tooling
 

@@ -43,14 +43,44 @@ learning-python = "learning_python:main"
 [tool.ruff]
 line-length = 79
 indent-width = 4
+exclude = ["tests/**"]
 
 [tool.ruff.lint]
 extend-select = [
-    "B", 
-    "E", 
-    "ERA001", # Commented out code
-    "N", 
-    "W"
+    "A", # Python builtins
+    "ANN", # Annotations
+    "ARG", # Arguments
+    "ASYNC", # Async
+    "B",
+    "BLE", # Bare except
+    "C4", # Comprehensions
+    "COM", # Commas
+    "D", # Pydoc
+    "DOC", # PyDoc
+    "DTZ", # Datetime
+    "E", # pycodestyle errors
+    "EM", # Error messages
+    "ERA", # Commented out code
+    "EXE", # Executables
+    "F", # pyflakes
+    "FBT", # Boolean traps
+    "FIX", # Fix me, TODO, etc
+    "INT", # String interpolation
+    "ISC", # String concatenation
+    "LOG", # Logging
+    "G", # Logging
+    "INP", # Namespaces
+    "N", # PEP8 Naming
+    "PERF", # Performance
+    "PL", # pylint
+    "Q", # Quotes
+    "RET", # Return values
+    "RUF", # ruff
+    "S", # Security
+    "SIM", # Simplify
+    "T20", # Print
+    "TRY", # Exceptions
+    "W", # pycodestyle warnings
 ]
 
 [tool.pytest.ini_options]
