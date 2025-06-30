@@ -43,9 +43,9 @@ learning-python = "learning_python:main"
 [tool.ruff]
 line-length = 79
 indent-width = 4
-exclude = ["tests/**"]
 
 [tool.ruff.lint]
+exclude = ["tests/**"]
 extend-select = [
     "A", # Python builtins
     "ANN", # Annotations
